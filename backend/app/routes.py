@@ -2,6 +2,7 @@ from flask import Blueprint, jsonify
 
 main = Blueprint('main', __name__)
 
+
 @main.route('/api/data')
 def get_data():
     data = {
