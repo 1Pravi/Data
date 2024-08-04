@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Chart from './Chart';
+import './Dashboard.css'; // Import the CSS file for styling
 
 const Dashboard = () => {
     const [data, setData] = useState(null);
@@ -12,7 +13,7 @@ const Dashboard = () => {
     }, []);
 
     return (
-        <div>
+        <div className="dashboard">
             <h1>Data Analytics Dashboard</h1>
             {data ? <Chart data={data} /> : <p>Loading...</p>}
         </div>

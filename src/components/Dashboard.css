@@ -1,0 +1,10 @@
+.dashboard {
+    margin-left: 0px; /* Ensure this matches the width of the sidebar */
+    transition: margin-left 0.3s ease;
+    padding: 20px;
+}
+
+/* Adjust for when the sidebar is closed (if necessary) */
+.sidebar.closed ~ .dashboard {
+    margin-left: 0;
+}
