@@ -1,9 +1,9 @@
 import React from 'react';
-import './Header.css'; // Import the CSS file for styling
+import './Header.css';
 
-const Header = () => {
+const Header = ({ isOpen }) => {
     return (
-        <div className="header">
+        <div className={`header ${isOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
             <h1>Data Analytics Dashboard</h1>
         </div>
     );

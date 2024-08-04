@@ -2,13 +2,7 @@ import React, { useState } from 'react';
 import { FaBars, FaChartPie, FaChartLine, FaChartBar, FaTimes } from 'react-icons/fa';
 import './Sidebar.css';
 
-const Sidebar = () => {
-    const [isOpen, setIsOpen] = useState(true); // Sidebar is open by default
-
-    const toggleSidebar = () => {
-        setIsOpen(!isOpen);
-    };
-
+const Sidebar = ({ isOpen, toggleSidebar }) => {
     return (
         <div>
             <button className="toggle-button" onClick={toggleSidebar}>

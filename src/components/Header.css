@@ -16,6 +16,6 @@
 
 /* Adjust for when the sidebar is closed (if necessary) */
 .sidebar.closed ~ .header {
-    left: 0;
+    margin-left: 0;
     width: 100%;
 }

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Chart from './Chart';
-import './Dashboard.css'; // Import the CSS file for styling
+import './Dashboard.css';
 
-const Dashboard = () => {
+const Dashboard = ({ isOpen }) => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
@@ -13,7 +13,7 @@ const Dashboard = () => {
     }, []);
 
     return (
-        <div className="dashboard">
+        <div className={`dashboard ${isOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
             <h1>Data Analytics Dashboard</h1>
             {data ? <Chart data={data} /> : <p>Loading...</p>}
         </div>
